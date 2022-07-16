@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 通过JSON.parse()将JSON对象转换为JS对象
+        var jsonStr='{"a":"Hello","b":"world"}';
+        var obj=JSON.parse(jsonStr);
+        console.log(obj);
+
+        // 通过JSON.stringify()将JS对象转换为JSON对象
+        var obj2={a:'hello',b:'world',c:false};
+        var str=JSON.stringify(obj2);
+        console.log(str);
+        console.log(typeof str);
+
+                // 1. 创建XHR对象
+                var xhr=new XMLHttpRequest();
+
+                // 2.调用OPEN函数 指定 请求方式 与 URL地址
+                xhr.open('GET','http://www.liulongbin.top:3006/api/getbooks?id=1');
+
+                // 3. 调用 send函数，发起Ajax请求
+                xhr.send();
+
+                // 4.监听onreadystatechange事件
+                xhr.onreadystatechange=function(){
+                    // 4.1 监听 xhr对象的请求状态readyState ； 与服务器相应的状态status
+                    if(xhr.readyState===4 && xhr.status === 200){
+                        console.log(xhr.responseText);
+
+                    }
+                }
+    </script>
+</body>
+</html>

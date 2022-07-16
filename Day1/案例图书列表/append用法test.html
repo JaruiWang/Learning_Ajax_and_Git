@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="mydiv"></div>
+    <script>
+        // $(A).append(B) 表示往 A 内部的末尾处插入 B（可包含 HTML 标签）
+        //  B可以是元素，也可以是包含标签的字符串
+        var div=$('<div>我是后面创建的div</div>');
+        var p='<p>我是后面创建的p</p>';
+        $('.mydiv').append(div);
+        $('.mydiv').append(p);
+    </script>
+</body>
+</html>

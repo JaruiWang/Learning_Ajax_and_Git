@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #angle{
+            width: 100px;
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <img src="./jiqimao.JPG"  id="angle" alt="">
+    <script>
+        var flag=true;
+        var angle=$('#angle');
+
+        console.log(angle.attr('src'));
+        console.log(angle.attr('id'));
+        console.log(angle.attr('left'));
+        console.log(angle.attr('width'));
+ 
+    </script>
+</body>
+</html>

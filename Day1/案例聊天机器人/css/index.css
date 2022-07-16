@@ -1,0 +1,106 @@
+.left_word img,.right_word img, .header img,.footer img{
+    width: 30px;
+    height: 30px;
+}
+
+.wrap{
+    width: 300px;
+    height: 500px;
+    background-color: pink;
+    position: relative;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+}
+
+.header h3{
+    float: left;
+    line-height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.header img{
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    background-color: aquamarine;
+}
+
+.footer img{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.footer  .input_txt{
+    /* line-height: 50px; */
+    height: 30px;
+    width: 170px;
+    display: inline-block;
+    /* padding-bottom: 10px; */
+    position: relative;
+    top: -10px;
+}
+
+.footer  .input_sub{
+    height: 30px;
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+}
+
+.left_word{
+    width: 100%;
+    /* height: 45px; */
+    /* background-color: antiquewhite; */
+    position: relative;
+}
+
+.left_word img{
+    float: left;
+    padding: 10px;
+}
+
+.left_word span{
+    float: left;
+    padding-top: 15px;
+    width: 230px;
+}
+
+.right_word{
+    width: 100%;
+    /* height: 45px; */
+    /* background-color: aquamarine; */
+    position: relative;
+  
+}
+
+.right_word img {
+    float: right;
+    /* padding: 10px; */
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.right_word span{
+    float: right;
+    padding-top: 15px;
+    width: 230px;
+    text-align: right;
+    background-color: pink;
+}
+
+.input_sub{
+    cursor: pointer;
+}

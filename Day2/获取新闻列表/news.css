@@ -1,0 +1,49 @@
+.news-item{
+    width: 600px;
+    height: 150px;
+    overflow: hidden;
+    background-color: pink;
+    /* border: 1px solid; */
+}
+
+.news-item .thumb{
+    width: 200px;
+    float: left;
+    padding: 10px;
+}
+
+.right-box{
+    width: 380px;
+    float: left;
+    position: relative;
+    height: 100%;
+}
+
+.right-box h2{
+    font-size: 20px;
+}
+
+.right-box  .tags, .right-box  .bottom{
+    font-size: 12px;
+}
+
+.right-box  .tags{
+    height: 50px;
+    line-height: 50px;
+    
+}
+
+.right-box  .tags span{
+    background-color: antiquewhite;
+}
+
+.right-box  .bottom{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.right-box  .bottom .comments{
+    float: right;
+    padding-right: 10px;
+}

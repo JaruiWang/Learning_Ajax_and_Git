@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 创建XHR对象
+        var xhr=new XMLHttpRequest();
+
+        // 2.调用OPEN函数 指定 请求方式 与 URL地址
+        xhr.open('POST','http://www.liulongbin.top:3006/api/addbook');
+
+        // 3. 设置Content-Type属性（固定写法）
+        xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
+        // 4. 调用 send函数，发起Ajax请求
+        xhr.send('bookname=水浒&author=施耐庵12&publisher=天津图书出版社');
+
+        // 5.监听onreadystatechange事件
+        xhr.onreadystatechange=function(){
+            // 5.1 监听 xhr对象的请求状态readyState ； 与服务器相应的状态status
+            if(xhr.readyState===4 && xhr.status === 200){
+                console.log(xhr.responseText);
+
+            }
+        }
+        
+
+
+    </script>
+</body>
+</html>

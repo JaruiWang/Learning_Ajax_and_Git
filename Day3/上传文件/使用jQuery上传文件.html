@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+        <!-- 文件选择框 -->
+        <input type="file" id="file1">
+        <!-- 上传文件的按钮 -->
+        <button id="btnUpload">上传文件</button>
+        <img src="./123.png" alt="" id="loading" style="display:none;">
+        <script>
+            $(function(){
+                // 监听到Ajax请求被发现
+                $(document).ajaxStart(function(){
+                    $('#loading').show();
+                })
+
+                $(document).ajaxStop(function(){
+                    $('#loading').hide();
+                })
+
+            })
+        // 验证是否选择了文件
+        $('#btnUpload').on('click',function(){
+            
+            var files=$('#file1')[0].files;
+            if(files.length<=0){
+              return  alert('请选择要上传的文件！');
+            }
+            console.log("用户选择了文件");
+            
+            // 1. 新建 FromData对象
+            var fd=new FormData();
+    
+            // 2. 将用户选择的文件添加到FormData
+            fd.append('avatar',files[0]);
+            // 发起jQuery的Ajax请求，上传文件
+            // 不能使用$.POST 
+            $.ajax({type:'POST',
+            url:'http://www.liulongbin.top:3006/api/upload/avatar' ,
+            data:fd ,
+            // 不能修改content-Type属性,使用FormData默认的content-Type值
+            contentType:false,
+            // 不对FormData中的数据进行编码,而是将FormData数据原样发送到服务器
+            processData:false,
+            success:function(res){
+                console.log(res);
+            }});
+             
+        })
+ 
+        </script>
+    
+</body>
+</html>

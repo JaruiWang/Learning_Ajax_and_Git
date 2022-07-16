@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <form action="/login" id="f1">
+        <input type="text" name="user_name">
+        <input type="password" name="password">
+        <button type="submit">提交</button>
+    </form>
+
+    <script>
+        $(function(){
+
+            // 第一种方式
+            // $('#f1').submit(function(){
+            //     alert('监听到了表单的提交事件。');
+            // })
+
+            // 第二种方式
+            $('#f1').on('submit',function(e){
+                // 阻止表单的提交和页面的跳转
+                e.preventDefault();
+                alert('用第二种方式监听到了');
+
+                var valuestr=$(this).serialize();
+                console.log(valuestr);   
+                console.log(typeof valuestr); 
+            })
+
+
+        })
+    </script>
+</body>
+</html>
