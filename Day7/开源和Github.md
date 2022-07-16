@@ -92,8 +92,26 @@ git checkout -b 分支名字
 checkout 表示切换到刚才创建的分支上
 注意：创建新分支的时候要先切换到master主分支上面，基于master主分支进行复制。
 
-## 合并分支
+### 合并分支
 需要先切换到master主分支上，再使用git merge命令
 git checkout master
 在master分支上运行git merge命令，将login分支的代码合并到master分支上
 git merge login
+
+### 删除分支
+git branch -d 分支名称
+
+例如，删除login分支
+git branch -d login
+
+## 遇到冲突时的分支合并
+需要先切换到master主分支上，再使用git merge命令
+git checkout master
+在master分支上运行git merge命令，将login分支的代码合并到master分支上
+git merge login
+
+会弹出提示 合并中有冲突了
+需要我们手动打开文件修改冲突
+修改完成后，输入
+git add .
+git commit -m "解决了分支合并冲突的问题"
