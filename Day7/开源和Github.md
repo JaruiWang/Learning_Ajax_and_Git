@@ -130,3 +130,23 @@ git push -u origin payment
 
 ### 查看远程仓库中所有的分支列表
 git remote show 远程仓库名称
+
+## 跟踪分支
+跟踪分支指的是：从远程仓库中，把远程分支下载到本地仓库中。
+如何保持本地分支和远程分支名称相同
+运行指令： git checkout 远程分支的名称
+例如： git checkout pay
+
+本地分支和远程分支名称不一致的话
+运行指令：git checkout -b 本地分支名称  远程仓库名称/远程分支名称
+例如：
+git checkout -b payment origin/pay
+
+## 拉取远程分支的最新的代码
+从远程仓库，拉取当前分支最新的代码
+git pull
+
+## 如何删除远程仓库中的分支
+git push 远程仓库名称 --delete 远程分支名称
+例如：
+git push origin --delete pay
